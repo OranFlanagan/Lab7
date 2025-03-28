@@ -7,13 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- *ngFor directive creates a card for each movie in the list -->
   <ion-card *ngFor="let x of myMovies" style="text-align: center;">
+    <!-- Movie poster image, dynamically set from x.Poster -->
     <img src={{x.Poster}}/>
+    
+    <!-- Card header with movie details -->
     <ion-card-header>
+      <!-- Movie title displayed as the card title -->
       <ion-card-title>{{x.Title}}</ion-card-title>
+      
+      <!-- Movie year displayed as a subtitle -->
       <ion-card-subtitle>{{x.Year}}</ion-card-subtitle>
     </ion-card-header>
   
-
   </ion-card>
 </ion-content>
